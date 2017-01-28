@@ -1,13 +1,23 @@
 package nl.saxion.helpdesk;
 import nl.saxion.helpdesk.data.*;
 
+import java.util.ArrayList;
+
 public class Helpdesk {
     /**
      * Contains the user that is currently logged in.
      */
 	private User currentUser;
+	private ArrayList<User> users = new ArrayList<User>();
+	private ArrayList<Ticket> tickets = new ArrayList<Ticket>();
+	
+	public Helpdesk(User currentUser, ArrayList<User> users, ArrayList<Ticket> tickets) {
+		this.currentUser = currentUser;
+		this.users = users;
+		this.tickets = tickets;
+	}
 
-    /**
+	/**
      * Reads in a file and creates users and tickets in the system
      * @param filename Filename
      * @return Number of created objects

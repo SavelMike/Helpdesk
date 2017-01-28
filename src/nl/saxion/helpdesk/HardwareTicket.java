@@ -7,6 +7,16 @@ public class HardwareTicket extends Ticket {
 
     private String machineCode;
 
-    
-
+    /**
+     *Constructor for
+     * @param ticketNumber
+     * @param description
+     * @param username
+     * @param usernameResponse
+     * @param machineCode
+     */
+    public HardwareTicket(int ticketNumber, String description, String username, String usernameResponse, String machineCode) {
+        super(ticketNumber, description, username, usernameResponse);
+        this.machineCode = machineCode;
+    }
 }
