@@ -6,9 +6,14 @@ package nl.saxion.helpdesk;
 public class Ticket {
 
     private int ticketNumber;
-    private String discription;
+    private String description;
     private String username;
     private String usernameResponse;
-    private String 
 
+    public Ticket(int ticketNumber, String description, String username, String usernameResponse) {
+        this.ticketNumber = ticketNumber;
+        this.description = description;
+        this.username = username;
+        this.usernameResponse = usernameResponse;
+    }
 }
