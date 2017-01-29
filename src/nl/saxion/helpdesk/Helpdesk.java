@@ -115,7 +115,41 @@ public class Helpdesk {
      */
 	private Ticket importTicket(String line) throws HelpdeskException {
         // TODO: Implement this method
-        return null;
+		// 0. associate scanner with input string and set delimiter
+		Scanner in = new Scanner(line);
+		in.useDelimiter(";");
+
+        // 1. read first word from input string
+		String objectType = in.next();
+
+		// 2. read second word (ticket number)
+		String ticketNumber = "";
+		if (in.hasNext()) {
+			ticketNumber = in.next();
+		}
+
+		// 3. read third word (typeOfTicket)
+		String ticketType = "";
+		if (in.hasNext()) {
+			ticketType = in.next();
+		}
+
+		// 4. read fourth word (userName)
+		String userName = "";
+		if (in.hasNext()) {
+			userName = in.next();
+		}
+
+		// 5. read fifth word (machineCode or SoftwareName)
+		String description = "";
+		if (in.hasNext()) {
+			description = in.next();
+		}
+
+		// 6.
+		if (!in.hasNext()) {
+			Ticket ticket = new Ticket(ticketNumber, ticketType, userName, description);
+			return null;
 	}
 
     /**
