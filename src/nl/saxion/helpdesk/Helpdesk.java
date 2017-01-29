@@ -123,9 +123,9 @@ public class Helpdesk {
 		String objectType = in.next();
 
 		// 2. read second word (ticket number)
-		String ticketNumber = "";
-		if (in.hasNext()) {
-			ticketNumber = in.next();
+		int ticketNumber = 0;
+		if (in.hasNextInt()) {
+			ticketNumber = in.nextInt();
 		}
 
 		// 3. read third word (typeOfTicket)
@@ -155,14 +155,21 @@ public class Helpdesk {
 
 		// 7.
 		String usernameManager = "";
+		String response = "";
 		if (in.hasNext()) {
 			usernameManager = in.next();
+			if (in.hasNext()) {
+				response = in.next();
+			}
 		}
 
 		if (!in.hasNext()) {
-			if (ticketType == "")
-			Ticket ticket = new Ticket(ticketNumber, ticketType, userName, description);
-			return null;
+			if (ticketType == "Software") {
+				SoftwareTicket Softwareticket = new SoftwareTicket(ticketNumber, ticketType, userName, description, employeeInput);
+				return Softwareticket;
+			}
+			HardwareTicket Hardwareticket = new HardwareTicket(ticketNumber, ticketType, userName, description, employeeInput);
+			return Hardwareticket;
 	}
 
     /**
