@@ -99,7 +99,7 @@ public class Helpdesk {
 			fifthWord = in.next();
 		}
 		if (!in.hasNext()) {
-			Manager manager = new Manager(firstWord, secondWord, thirdWord, fourthWord, fifthWord);
+			Manager manager = new Manager(secondWord, thirdWord, fourthWord, fifthWord);
 		}
 	}
 
