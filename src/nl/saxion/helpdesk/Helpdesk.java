@@ -62,7 +62,35 @@ public class Helpdesk {
      */
 	private User importUser(String line) throws HelpdeskException {
         // TODO: Implement this method
-        return null;
+
+		// 0. associate scanner with input string and set delimiter
+		Scanner in = new Scanner(line);
+		in.useDelimiter(";");
+
+		// 1. read first word from input string
+		String firstWord = in.next();
+
+		// 2. read second word (username)
+		if (in.hasNext()) {
+			String secondWord = in.next();
+		}
+		// 3. read third word (passwd)
+		if (in.hasNext()) {
+			String thirdWord = in.next();
+		}
+		if (!in.hasNext()) {
+			User user = new User(secondWord, thirdWord);
+		}
+
+		if (first word is User) {
+			create user;
+			return user;
+		}
+
+		/* create Manager;
+        read 4th word
+		return null;
+		*/
 	}
 
     /**
