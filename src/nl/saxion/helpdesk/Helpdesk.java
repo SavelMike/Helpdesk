@@ -19,33 +19,34 @@ public class Helpdesk {
      * @throws HelpdeskException An exception is thrown when the file cannot be read, or when a line is incomplete
      */
 	public int importData(String filename) throws HelpdeskException {
-        // TODO: Implement this method
+		// TODO: Implement this method
 		// open file
 		// loop to read String from file
-		   while (in.hasNextLine()) {
-				get next string  (String line = nextLine());
-        		if (it is comment skip) {
-        		continue;
-				}
-				Scanner sc = new scanner();
-				String word = sc.next();
-				sc.useDelimeter(;);
+		while (in.hasNextLine()) {
+			get next string(String line = nextLine());
+			if (it is comment skip) {
+				continue;
+			}
+			Scanner sc = new scanner();
+			String word = sc.next();
+			sc.useDelimeter(;);
 
-			    if (user is User) {
-					add user;
-					continue;
-			    }
-			    if (user is Manager) {
-					add Manager;
-					continue;
-			    }
-			    if (user is Ticket) {
-					add Ticket;
-		      		continue;
-			   }
-		   }
+			if (user is User) {
+				add user;
+				continue;
+			}
+			if (user is Manager) {
+				add Manager;
+				continue;
+			}
+			if (user is Ticket) {
+				add Ticket;
+				continue;
+			}
+		}
+	}
 
-	*/
+
 
     /**
      * Processes a CSV line from an input file and tries to create a user object
