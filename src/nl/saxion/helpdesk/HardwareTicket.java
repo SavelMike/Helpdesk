@@ -12,11 +12,12 @@ public class HardwareTicket extends Ticket {
      * @param ticketNumber
      * @param description
      * @param username
+     * @param ManagerName
      * @param usernameResponse
      * @param machineCode
      */
-    public HardwareTicket(int ticketNumber, String description, String username, String usernameResponse, String machineCode) {
-        super(ticketNumber, description, username, usernameResponse);
+    public HardwareTicket(int ticketNumber, String description, String username, String ManagerName, String usernameResponse, String machineCode) {
+        super(ticketNumber, description, username, ManagerName, usernameResponse);
         this.machineCode = machineCode;
     }
 }

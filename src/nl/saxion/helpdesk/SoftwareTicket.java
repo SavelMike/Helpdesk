@@ -12,11 +12,12 @@ public class SoftwareTicket extends Ticket {
      * @param ticketNumber
      * @param description
      * @param username
+     * @param ManagerName
      * @param usernameResponse
      * @param softwareName
      */
-    public SoftwareTicket(int ticketNumber, String description, String username, String usernameResponse, String softwareName) {
-        super(ticketNumber, description, username, usernameResponse);
+    public SoftwareTicket(int ticketNumber, String description, String username, String ManagerName, String usernameResponse, String softwareName) {
+        super(ticketNumber, description, username, ManagerName, usernameResponse);
         this.softwareName = softwareName;
     }
 }
