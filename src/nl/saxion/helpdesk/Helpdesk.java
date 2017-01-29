@@ -100,6 +100,7 @@ public class Helpdesk {
 		}
 		if (!in.hasNext()) {
 			Manager manager = new Manager(secondWord, thirdWord, fourthWord, fifthWord);
+			return manager;
 		}
 	}
 
