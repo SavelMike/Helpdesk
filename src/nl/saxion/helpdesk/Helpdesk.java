@@ -140,14 +140,27 @@ public class Helpdesk {
 			userName = in.next();
 		}
 
+
 		// 5. read fifth word (machineCode or SoftwareName)
+		String employeeInput = "";
+		if (in.hasNext()) {
+			employeeInput = in.next();
+		}
+
+		// 6. read  6 word
 		String description = "";
 		if (in.hasNext()) {
 			description = in.next();
 		}
 
-		// 6.
+		// 7.
+		String usernameManager = "";
+		if (in.hasNext()) {
+			usernameManager = in.next();
+		}
+
 		if (!in.hasNext()) {
+			if (ticketType == "")
 			Ticket ticket = new Ticket(ticketNumber, ticketType, userName, description);
 			return null;
 	}
