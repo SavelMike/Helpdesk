@@ -22,25 +22,28 @@ public class Helpdesk {
         // TODO: Implement this method
 		// open file
 		// loop to read String from file
-		/* while (in.hasNextLine()) {
+		   while (in.hasNextLine()) {
 				get next string  (String line = nextLine());
-        		If (it is comment skip) {
+        		if (it is comment skip) {
         		continue;
 				}
 				Scanner sc = new scanner();
-				String word = in.next();
+				String word = sc.next();
 				sc.useDelimeter(;);
-				if (user is User) {
+
+			    if (user is User) {
 					add user;
 					continue;
-				}
-				if (user is Manager)
-					add.Manager;
+			    }
+			    if (user is Manager) {
+					add Manager;
 					continue;
-		  		if (user is Ticket)
-					add.Ticket;
+			    }
+			    if (user is Ticket) {
+					add Ticket;
 		      		continue;
-		      }
+			   }
+		   }
 
 	*/
 
