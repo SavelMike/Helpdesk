@@ -24,24 +24,23 @@ public class Helpdesk {
 		// loop to read String from file
 		/* while (in.hasNextLine()) {
 				get next string  (String line = nextLine());
-				Process line.
-        		return -1;
         		If (it is comment skip) {
         		continue;
-			}
-		//  Scanner sc = new scanner();
-		//	String word = in.next();
-		//	sc.useDelimeter(;);
-		//	if (user is User) {
-		//		add.user;
-		//		continue;
-		//	}
-		//	if (user is Manager)
-		//		add.Manager;
-		//		continue;
-		//  if (user is Ticket)
-		//		add.Ticket;
-		//      continue;
+				}
+				Scanner sc = new scanner();
+				String word = in.next();
+				sc.useDelimeter(;);
+				if (user is User) {
+					add user;
+					continue;
+				}
+				if (user is Manager)
+					add.Manager;
+					continue;
+		  		if (user is Ticket)
+					add.Ticket;
+		      		continue;
+		      }
 
 	*/
 
