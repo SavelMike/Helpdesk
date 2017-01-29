@@ -22,15 +22,13 @@ public class Helpdesk {
      * @throws HelpdeskException An exception is thrown when the file cannot be read, or when a line is incomplete
      */
 	public int importData(String filename) throws HelpdeskException, FileNotFoundException {
-		// TODO: Implement this method
-		// open file
-		// loop to read String from file
-		File f = new File("i-desk.txt");
+
+		File f = new File(filename);
 		Scanner in = new Scanner(f);
 		int countObjects = 0;
 
 		while (in.hasNextLine()) {
-			// get next string
+
 			String line = in.nextLine();
 			if ((line.charAt(0) == '#') || (line.isEmpty())) {
 				continue;
