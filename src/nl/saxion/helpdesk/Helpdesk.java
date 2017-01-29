@@ -71,26 +71,36 @@ public class Helpdesk {
 		String firstWord = in.next();
 
 		// 2. read second word (username)
+		String secondWord;
 		if (in.hasNext()) {
-			String secondWord = in.next();
+			secondWord = in.next();
 		}
 		// 3. read third word (passwd)
+		String thirdWord;
 		if (in.hasNext()) {
-			String thirdWord = in.next();
+			thirdWord = in.next();
+		}
+
+		if (firstWord.equals("User")) {
+			if (!in.hasNext()) {
+				User user = new User(secondWord, thirdWord);
+				return user;
+		}
+
+		/* here first word is Manager */
+		// 5. read 4th word
+		String fourthWord = "";
+		if (in.hasNext()) {
+			fourthWord = in.next();
+		}
+		/* 6. read 5th word */
+		String fifthWord = "";
+		if (in.hasNext()) {
+			fifthWord = in.next();
 		}
 		if (!in.hasNext()) {
-			User user = new User(secondWord, thirdWord);
+			Manager manager = new Manager(firstWord, secondWord, thirdWord, fourthWord, fifthWord);
 		}
-
-		if (first word is User) {
-			create user;
-			return user;
-		}
-
-		/* create Manager;
-        read 4th word
-		return null;
-		*/
 	}
 
     /**
