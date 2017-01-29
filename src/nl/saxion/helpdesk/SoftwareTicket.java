@@ -8,16 +8,16 @@ public class SoftwareTicket extends Ticket {
     private String softwareName;
 
     /**
-     * Call the constructor for SoftwareTicket
+     * the constructor for SoftwareTicket
      * @param ticketNumber
      * @param description
      * @param username
      * @param ManagerName
-     * @param usernameResponse
+     * @param managerResponse
      * @param softwareName
      */
-    public SoftwareTicket(int ticketNumber, String description, String username, String ManagerName, String usernameResponse, String softwareName) {
-        super(ticketNumber, description, username, ManagerName, usernameResponse);
+    public SoftwareTicket(int ticketNumber, String description, String username, String ManagerName, String managerResponse, String softwareName) {
+        super(ticketNumber, description, username, ManagerName, managerResponse);
         this.softwareName = softwareName;
     }
 }

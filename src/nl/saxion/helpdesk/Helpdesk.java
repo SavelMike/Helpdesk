@@ -181,6 +181,14 @@ public class Helpdesk {
      */
 	private User findUserByUsername(String username) {
         // TODO: Implement this method
+		// ArrayList<User> users;
+		for (int i = 0; i < users.size(); i++) {
+			User u = users.get(i);
+			String curname = u.getUsername();
+			if (curname.equals(username)) {
+				return u;
+			}
+		}
         return null;
 	}
 
