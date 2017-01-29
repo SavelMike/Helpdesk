@@ -22,6 +22,9 @@ public class Helpdesk {
 		// TODO: Implement this method
 		// open file
 		// loop to read String from file
+		int countUsers = 0;
+		int countTickets = 0;
+
 		while (in.hasNextLine()) {
 			get next string(String line = nextLine());
 			if (it is comment skip) {
@@ -31,19 +34,19 @@ public class Helpdesk {
 			String word = sc.next();
 			sc.useDelimeter(;);
 
-			if (user is User) {
-				add user;
+			if ((word.equals("User")) || (word.equals("Manager"))) {
+				users.add(importUser(line));
+				countUsers++;
 				continue;
 			}
-			if (user is Manager) {
-				add Manager;
-				continue;
-			}
-			if (user is Ticket) {
-				add Ticket;
+
+			if (word.equals("Ticket")) {
+				tickets.add(importTicket(line));
+				countTickets++;
 				continue;
 			}
 		}
+		return countUsers + countTickets;
 	}
 
 
