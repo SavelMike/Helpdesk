@@ -2,6 +2,7 @@ package nl.saxion.helpdesk;
 import nl.saxion.helpdesk.data.*;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Helpdesk {
     /**
@@ -22,31 +23,32 @@ public class Helpdesk {
 		// TODO: Implement this method
 		// open file
 		// loop to read String from file
-		int countUsers = 0;
-		int countTickets = 0;
+		int countObjects = 0;
+		Scanner in = new Scanner("i-desk.txt");
 
 		while (in.hasNextLine()) {
-			get next string(String line = nextLine());
-			if (it is comment skip) {
+			// get next string
+			String line = in.nextLine();
+			if ((line.charAt(0) == '#') || (line.isEmpty())) {
 				continue;
 			}
-			Scanner sc = new scanner();
+			Scanner sc = new Scanner(line);
 			String word = sc.next();
-			sc.useDelimeter(;);
+			sc.useDelimiter(";");
 
 			if ((word.equals("User")) || (word.equals("Manager"))) {
 				users.add(importUser(line));
-				countUsers++;
+				countObjects++;
 				continue;
 			}
 
 			if (word.equals("Ticket")) {
 				tickets.add(importTicket(line));
-				countTickets++;
+				countObjects++;
 				continue;
 			}
 		}
-		return countUsers + countTickets;
+		return countObjects;
 	}
 
 
