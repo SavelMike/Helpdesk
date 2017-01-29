@@ -1,5 +1,7 @@
 package nl.saxion.helpdesk;
 import nl.saxion.helpdesk.data.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,12 +21,13 @@ public class Helpdesk {
      * @return Number of created objects
      * @throws HelpdeskException An exception is thrown when the file cannot be read, or when a line is incomplete
      */
-	public int importData(String filename) throws HelpdeskException {
+	public int importData(String filename) throws HelpdeskException, FileNotFoundException {
 		// TODO: Implement this method
 		// open file
 		// loop to read String from file
+		File f = new File("i-desk.txt");
+		Scanner in = new Scanner(f);
 		int countObjects = 0;
-		Scanner in = new Scanner("i-desk.txt");
 
 		while (in.hasNextLine()) {
 			// get next string
