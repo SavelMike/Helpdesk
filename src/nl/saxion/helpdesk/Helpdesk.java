@@ -71,12 +71,12 @@ public class Helpdesk {
 		String firstWord = in.next();
 
 		// 2. read second word (username)
-		String secondWord;
+		String secondWord = "";
 		if (in.hasNext()) {
 			secondWord = in.next();
 		}
 		// 3. read third word (passwd)
-		String thirdWord;
+		String thirdWord = "";
 		if (in.hasNext()) {
 			thirdWord = in.next();
 		}
@@ -85,6 +85,7 @@ public class Helpdesk {
 			if (!in.hasNext()) {
 				User user = new User(secondWord, thirdWord);
 				return user;
+			}
 		}
 
 		/* here first word is Manager */
@@ -101,6 +102,8 @@ public class Helpdesk {
 		if (!in.hasNext()) {
 			Manager manager = new Manager(secondWord, thirdWord, fourthWord, fifthWord);
 			return manager;
+		} else {
+			return null;
 		}
 	}
 

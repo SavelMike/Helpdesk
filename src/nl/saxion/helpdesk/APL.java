@@ -1,5 +1,6 @@
 package nl.saxion.helpdesk;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Scanner;
  * @author Evert Duipmans
  */
 public class APL {
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		Helpdesk helpdesk = new Helpdesk();
 
 		// Read all the data
@@ -16,6 +17,8 @@ public class APL {
 		try {
 			numObjects = helpdesk.importData("i-desk.txt");
 		} catch (HelpdeskException e) {
+			System.err.println(e.getMessage());
+		} catch (FileNotFoundException e) {
 			System.err.println(e.getMessage());
 		}
 		System.out.println("Read: " + numObjects + " objects.");
