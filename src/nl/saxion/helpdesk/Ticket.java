@@ -26,4 +26,9 @@ public class Ticket {
         this.usernameManager = ManagerName;
         this.usernameResponse = usernameResponse;
     }
+
+    @Override
+    public String toString() {
+        return ticketNumber + ';' + username + ';' + description + ';' + usernameManager + ';' + usernameResponse;
+    }
 }

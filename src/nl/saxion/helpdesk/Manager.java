@@ -13,4 +13,9 @@ public class Manager extends User {
         this.expertise = expertise;
         this.department = department;
     }
+
+    @Override
+    public String toString() {
+        return "Manager;" + getUsername() + ';' + getPassword() + ';' + expertise + ';' + department;
+    }
 }

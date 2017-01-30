@@ -3,6 +3,7 @@ import nl.saxion.helpdesk.data.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -114,7 +115,7 @@ public class Helpdesk {
      * @throws HelpdeskException If the line is incorrect an exception is thrown
      */
 	private Ticket importTicket(String line) throws HelpdeskException {
-        // TODO: Implement this method
+
 		// 0. associate scanner with input string and set delimiter
 		Scanner in = new Scanner(line);
 		in.useDelimiter(";");
@@ -180,7 +181,7 @@ public class Helpdesk {
      * @return Returns the User object that corresponds to the current username, otherwise null is returned
      */
 	private User findUserByUsername(String username) {
-        // TODO: Implement this method
+
 		// ArrayList<User> users;
 		for (int i = 0; i < users.size(); i++) {
 			User u = users.get(i);
@@ -197,8 +198,15 @@ public class Helpdesk {
      * IMPORTANT: EXPORT FIRST THE USERS AND THEN THE TICKETS, OTHERWISE THE FILE CANNOT BE IMPORTED ANYMORE!!!
 	 * @param filename Filename of the export file
 	 */
-	public void exportData(String filename) {
-        // TODO: Implement this method
+	public void exportData(String filename) throws FileNotFoundException {
+		// open file by object printwriter
+		PrintWriter pr = new PrintWriter(filename);
+		for (int i = 0; i < users.size(); i++) {
+			pr.println(users.get(i));
+		}
+		for (int i = 0; i < tickets.size(); i++) {
+			pr.println(tickets.get(i));
+		}
 	}
 	
 	/**
