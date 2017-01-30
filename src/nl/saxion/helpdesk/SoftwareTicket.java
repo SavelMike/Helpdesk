@@ -20,4 +20,10 @@ public class SoftwareTicket extends Ticket {
         super(ticketNumber, description, username, ManagerName, managerResponse);
         this.softwareName = softwareName;
     }
+
+    @Override
+    public String toString() {
+        return "SoftwareTicket;" + getTicketNumber() + ";" + getUsername() + ";" + softwareName + ";"
+                + getDescription() + ";" + getUsernameManager() + ";" + getUsernameResponse();
+    }
 }

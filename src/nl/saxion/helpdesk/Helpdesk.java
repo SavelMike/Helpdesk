@@ -207,6 +207,7 @@ public class Helpdesk {
 		for (int i = 0; i < tickets.size(); i++) {
 			pr.println(tickets.get(i));
 		}
+		pr.close();
 	}
 	
 	/**

@@ -20,4 +20,10 @@ public class HardwareTicket extends Ticket {
         super(ticketNumber, description, username, ManagerName, managerResponse);
         this.machineCode = machineCode;
     }
+
+    @Override
+    public String toString() {
+        return "HardwareTicket;" + getTicketNumber() + ";" + getUsername() + ";" + machineCode + ";"
+                + getDescription() + ";" + getUsernameManager() + ";" + getUsernameResponse();
+    }
 }

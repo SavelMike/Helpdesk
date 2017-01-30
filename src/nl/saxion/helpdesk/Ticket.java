@@ -27,8 +27,28 @@ public class Ticket {
         this.usernameResponse = usernameResponse;
     }
 
+    public int getTicketNumber() {
+        return ticketNumber;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getUsernameManager() {
+        return usernameManager;
+    }
+
+    public String getUsernameResponse() {
+        return usernameResponse;
+    }
+
     @Override
     public String toString() {
-        return ticketNumber + ';' + username + ';' + description + ';' + usernameManager + ';' + usernameResponse;
+        return "Ticket; " + ticketNumber + ';' + username + ';' + description + ';' + usernameManager + ';' + usernameResponse;
     }
 }
