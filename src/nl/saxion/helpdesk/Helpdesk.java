@@ -217,7 +217,6 @@ public class Helpdesk {
 	 * @return True, if the user is logged on successfully
 	 */
 	public boolean login(String username, String password) {
-        // TODO: Implement this method
 		for (int i = 0; i < users.size(); i++) {
 			if ((users.get(i).getUsername().equals(username)) && (users.get(i).getPassword().equals(password))) {
 				currentUser = users.get(i);
@@ -231,7 +230,8 @@ public class Helpdesk {
 	 * Logout a user
 	 */
 	public void logout() {
-        // TODO: Implement this method
+
+		currentUser = null;
 	}
 	
 	/**
@@ -239,8 +239,8 @@ public class Helpdesk {
 	 * @return True, if the user is logged on
 	 */
 	public boolean isLoggedOn() {
-        // TODO: Implement this method
-        return false;
+
+        return currentUser != null;
 	}
 	
 	/**
@@ -248,8 +248,8 @@ public class Helpdesk {
 	 * @return True, if the user is a manager
 	 */
 	public boolean isManager() {
-	    // TODO: Implement this method
-        return false;
+
+		return currentUser instanceof Manager;
 	}
 
 	/**
