@@ -218,6 +218,12 @@ public class Helpdesk {
 	 */
 	public boolean login(String username, String password) {
         // TODO: Implement this method
+		for (int i = 0; i < users.size(); i++) {
+			if ((users.get(i).getUsername().equals(username)) && (users.get(i).getPassword().equals(password))) {
+				currentUser = users.get(i);
+				return true;
+			}
+		}
 		return false;
 	}
 	
