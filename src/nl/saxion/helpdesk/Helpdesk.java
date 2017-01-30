@@ -259,7 +259,7 @@ public class Helpdesk {
 	 */
 	public int addHardwareTicket(String description, String machineCode) {
 
-		HardwareTicket hardwareTicket = new HardwareTicket(users.size() + 1, currentUser.getUsername(), machineCode, description, null, null);
+		HardwareTicket hardwareTicket = new HardwareTicket(tickets.size() + 1, description, currentUser.getUsername(), null, null, machineCode);
         tickets.add(hardwareTicket);
 		return hardwareTicket.getTicketNumber();
 	}
@@ -270,8 +270,8 @@ public class Helpdesk {
 	 * @param softwareName Name of the piece of software
 	 */
 	public int addSoftwareTicket(String description, String softwareName) {
-        
-		SoftwareTicket softwareTicket = new SoftwareTicket(users.size() + 1, currentUser.getUsername(), softwareName, description, null, null);
+
+		SoftwareTicket softwareTicket = new SoftwareTicket(tickets.size() + 1, description, currentUser.getUsername(), null, null, softwareName);
 		tickets.add(softwareTicket);
         return softwareTicket.getTicketNumber();
 	}
