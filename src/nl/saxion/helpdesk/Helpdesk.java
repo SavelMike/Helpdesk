@@ -283,14 +283,17 @@ public class Helpdesk {
 	 * @throws HelpdeskException When the ticket is not found, the current user is no manager or the ticket is already resolved
 	 */
 	public void resolveTicket(int ticketNumber, String response) throws HelpdeskException {
-        // TODO: Implement this method
-		if (tickets.size() < ticketNumber)) {
-			if (currentUser.getUsername() {
-				if ()
-			}
+		// TODO: Implement this method
+		if (tickets.size() < ticketNumber) {
 		}
-		 setUsernameManager();
+		if (currentUser.getUsername() != null) {
+		}
+		if ((ticket.getUsernameManager() != null) && (ticket.getUsernameResponse() != null)) {
+		}
+		Ticket ticket = tickets.get(ticketNumber);
+		ticket.setUsernameManager(response);
 	}
+
 
     /**
      * Print all my tickets
