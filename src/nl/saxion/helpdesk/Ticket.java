@@ -47,6 +47,14 @@ public class Ticket {
         return usernameResponse;
     }
 
+    public void setUsernameManager(String usernameManager) {
+        this.usernameManager = usernameManager;
+    }
+
+    public void setUsernameResponse(String usernameResponse) {
+        this.usernameResponse = usernameResponse;
+    }
+
     @Override
     public String toString() {
         return "Ticket; " + ticketNumber + ';' + username + ';' + description + ';' + usernameManager + ';' + usernameResponse;

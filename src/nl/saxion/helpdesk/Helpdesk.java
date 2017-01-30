@@ -284,6 +284,12 @@ public class Helpdesk {
 	 */
 	public void resolveTicket(int ticketNumber, String response) throws HelpdeskException {
         // TODO: Implement this method
+		if (tickets.size() < ticketNumber)) {
+			if (currentUser.getUsername() {
+				if ()
+			}
+		}
+		 setUsernameManager();
 	}
 
     /**
