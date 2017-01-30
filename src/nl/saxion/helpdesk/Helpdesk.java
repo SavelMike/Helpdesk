@@ -292,7 +292,7 @@ public class Helpdesk {
 			throw new HelpdeskException();
 		}
 
-		Ticket ticket = tickets.get(ticketNumber);
+		Ticket ticket = tickets.get(ticketNumber - 1);
 
 		if ((ticket.getUsernameManager() != null) && (ticket.getUsernameResponse() != null)) {
 			throw new HelpdeskException();
