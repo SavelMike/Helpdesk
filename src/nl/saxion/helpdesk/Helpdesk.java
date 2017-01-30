@@ -258,8 +258,10 @@ public class Helpdesk {
 	 * @param machineCode Code of the computer
 	 */
 	public int addHardwareTicket(String description, String machineCode) {
-        // TODO: Implement this method
-        return -1;
+
+		HardwareTicket hardwareTicket = new HardwareTicket(users.size() + 1, currentUser.getUsername(), machineCode, description, null, null);
+        tickets.add(hardwareTicket);
+		return hardwareTicket.getTicketNumber();
 	}
 
 	/**
@@ -268,8 +270,10 @@ public class Helpdesk {
 	 * @param softwareName Name of the piece of software
 	 */
 	public int addSoftwareTicket(String description, String softwareName) {
-        // TODO: Implement this method
-        return -1;
+        
+		SoftwareTicket softwareTicket = new SoftwareTicket(users.size() + 1, currentUser.getUsername(), softwareName, description, null, null);
+		tickets.add(softwareTicket);
+        return softwareTicket.getTicketNumber();
 	}
 
 	/**
