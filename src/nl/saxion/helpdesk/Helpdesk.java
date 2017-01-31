@@ -310,7 +310,7 @@ public class Helpdesk {
 
 		for (int i = 0; i < tickets.size(); i++) {
 			if (currentUser.getUsername().equals(tickets.get(i).getUsername())) {
-				System.out.println(tickets.get(i).toString());
+				System.out.println(tickets.get(i).toHumanString());
 			}
 		}
 

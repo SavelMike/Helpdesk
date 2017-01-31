@@ -23,7 +23,7 @@ public class HardwareTicket extends Ticket {
 
     @Override
     public String toString() {
-        return "Ticket;" + getTicketNumber() + "Hardware;" + getUsername() + ";" + machineCode + ";"
+        return "Ticket; " + getTicketNumber() + "; Hardware;" + getUsername() + " ;" + machineCode + ";"
                 + getDescription() + ";" + getUsernameManager() + ";" + getUsernameResponse();
     }
 }
