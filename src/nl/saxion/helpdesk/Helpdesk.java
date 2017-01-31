@@ -284,7 +284,6 @@ public class Helpdesk {
 	 */
 	public void resolveTicket(int ticketNumber, String response) throws HelpdeskException {
 
-		// TODO: Implement this method
 		if (tickets.size() < ticketNumber) {
 			throw new HelpdeskException();
 		}
@@ -306,7 +305,13 @@ public class Helpdesk {
      * Print all my tickets
      */
 	public void printMyTickets() {
-        // TODO: Implement this method
+
+		for (int i = 0; i < tickets.size(); i++) {
+			if (currentUser.getUsername() == tickets.get(i).getUsername()) {
+				System.out.println(tickets.get(i).toString());
+			}
+		}
+
 	}
 
     /**
@@ -314,7 +319,15 @@ public class Helpdesk {
      * @throws HelpdeskException Exception is thrown when the user that is logged on has not enough privileges
      */
 	public void printOpenTickets() throws HelpdeskException {
-        // TODO: Implement this method
+
+		if (isManager()) {
+			throw new  HelpdeskException();
+		}
+		for (int i = 0; i < tickets.size(); i++) {
+			if (tickets.get(i).getUsernameResponse().equals(null) && tickets.get(i).getUsernameManager().equals(null)) {
+				System.out.println(tickets.get(i).toString());
+			}
+		}
 	}
 
     /**
@@ -322,7 +335,13 @@ public class Helpdesk {
      * @throws HelpdeskException Exception is thrown when the user that is logged on has not enough privileges
      */
     public void printAllTickets() throws HelpdeskException {
-        // TODO: Implement this method
+
+		if (!isManager()) {
+			throw new HelpdeskException();
+		}
+		for (int i = 0; i < tickets.size(); i++) {
+			System.out.println(tickets.get(i).toString());
+		}
     }
 
     /**
@@ -330,6 +349,12 @@ public class Helpdesk {
      * @throws HelpdeskException Exception is thrown when the user that is logged is not employee of the helpdesk
      */
 	public void printUsers() throws HelpdeskException {
-        // TODO: Implement this method
+
+		if (isManager()) {
+			throw new HelpdeskException();
+		}
+		for (int i = 0; i < users.size(); i++) {
+			System.out.println(users.get(i).toString());
+		}
 	}
 }
