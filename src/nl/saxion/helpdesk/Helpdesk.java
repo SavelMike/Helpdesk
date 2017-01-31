@@ -307,7 +307,7 @@ public class Helpdesk {
 	public void printMyTickets() {
 
 		for (int i = 0; i < tickets.size(); i++) {
-			if (currentUser.getUsername() == tickets.get(i).getUsername()) {
+			if (currentUser.getUsername().equals(tickets.get(i).getUsername())) {
 				System.out.println(tickets.get(i).toString());
 			}
 		}
@@ -320,12 +320,12 @@ public class Helpdesk {
      */
 	public void printOpenTickets() throws HelpdeskException {
 
-		if (isManager()) {
+		if (!isManager()) {
 			throw new  HelpdeskException();
 		}
 		for (int i = 0; i < tickets.size(); i++) {
-			if (tickets.get(i).getUsernameResponse().equals(null) && tickets.get(i).getUsernameManager().equals(null)) {
-				System.out.println(tickets.get(i).toString());
+			if (tickets.get(i).getUsernameResponse().equals(null) && tickets.get(i).getUsernameManager() == null) {
+				System.out.println(tickets.get(i).toHumanString());
 			}
 		}
 	}
@@ -340,7 +340,7 @@ public class Helpdesk {
 			throw new HelpdeskException();
 		}
 		for (int i = 0; i < tickets.size(); i++) {
-			System.out.println(tickets.get(i).toString());
+			System.out.println(tickets.get(i).toHumanString());
 		}
     }
 
@@ -354,7 +354,8 @@ public class Helpdesk {
 			throw new HelpdeskException();
 		}
 		for (int i = 0; i < users.size(); i++) {
-			System.out.println(users.get(i).toString());
+			System.out.println(users.get(i).toHumanString());
 		}
 	}
+
 }

@@ -59,4 +59,9 @@ public class Ticket {
     public String toString() {
         return "Ticket; " + ticketNumber + ';' + username + ';' + description + ';' + usernameManager + ';' + usernameResponse;
     }
+
+    public String toHumanString() {
+        return "Ticket " + ticketNumber + ", username: " + username + ", description: " + description + "/n"
+                + "Name of manger: " + usernameManager + ", manager's response: " + usernameResponse;
+    }
 }

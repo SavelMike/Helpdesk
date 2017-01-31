@@ -25,4 +25,8 @@ public class User {
     public String toString() {
         return "User;" + username + ';' + password;
     }
+
+    public String toHumanString() {
+        return "User with name: " + username;
+    }
 }

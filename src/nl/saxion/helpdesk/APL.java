@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Evert Duipmans
  */
 public class APL {
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
 		Helpdesk helpdesk = new Helpdesk();
 
 		// Read all the data

@@ -18,4 +18,8 @@ public class Manager extends User {
     public String toString() {
         return "Manager;" + getUsername() + ';' + getPassword() + ';' + expertise + ';' + department;
     }
+
+    public String toHumanString() {
+        return "Manager with name: " + getUsername() + " from department of " + department + " and expertise in " + expertise;
+    }
 }
