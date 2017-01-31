@@ -121,7 +121,11 @@ public class APL {
 					System.out.println("Export data:");
 					System.out.println("Please enter the filename:");
 					String filename = askString();
-					helpdesk.exportData(filename);
+					try {
+						helpdesk.exportData(filename);
+					} catch (FileNotFoundException e) {
+						System.err.println(e.getMessage());
+					}
 				} else if (choice == 8) {
 					helpdesk.logout();
 				} else if (choice == 9){
