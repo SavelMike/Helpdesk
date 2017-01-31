@@ -38,8 +38,8 @@ public class Helpdesk {
 				continue;
 			}
 			Scanner sc = new Scanner(line);
-			String word = sc.next();
 			sc.useDelimiter(";");
+			String word = sc.next();
 
 			if ((word.equals("User")) || (word.equals("Manager"))) {
 				users.add(importUser(line));
