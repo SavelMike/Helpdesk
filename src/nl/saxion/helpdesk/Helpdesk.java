@@ -168,10 +168,10 @@ public class Helpdesk {
 
 		if (!in.hasNext()) {
 			if (ticketType == "Software") {
-				SoftwareTicket Softwareticket = new SoftwareTicket(ticketNumber, description, userName, employeeInput, usernameManager, response);
+				SoftwareTicket Softwareticket = new SoftwareTicket(ticketNumber, description, userName, usernameManager, response, employeeInput);
 				return Softwareticket;
 			}
-			HardwareTicket Hardwareticket = new HardwareTicket(ticketNumber, description, userName, employeeInput, usernameManager, response);
+			HardwareTicket Hardwareticket = new HardwareTicket(ticketNumber, description, userName, usernameManager, response, employeeInput);
 			return Hardwareticket;
 		}
 		return null;
