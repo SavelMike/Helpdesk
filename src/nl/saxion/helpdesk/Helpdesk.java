@@ -31,7 +31,10 @@ public class Helpdesk {
 		while (in.hasNextLine()) {
 
 			String line = in.nextLine();
-			if ((line.charAt(0) == '#') || (line.isEmpty())) {
+			if (line.isEmpty()) {
+				continue;
+			}
+			if ((line.charAt(0) == '#')) {
 				continue;
 			}
 			Scanner sc = new Scanner(line);
@@ -62,7 +65,6 @@ public class Helpdesk {
      * @throws HelpdeskException If the line is incorrect an exception is thrown
      */
 	private User importUser(String line) throws HelpdeskException {
-        // TODO: Implement this method
 
 		// 0. associate scanner with input string and set delimiter
 		Scanner in = new Scanner(line);
